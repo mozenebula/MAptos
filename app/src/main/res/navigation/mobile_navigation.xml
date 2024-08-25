@@ -22,4 +22,10 @@
         android:name="com.qstack.maptos.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_DeFi"
+        android:name="com.qstack.maptos.ui.defi.DeFiFragment"
+        android:label="@string/title_DeFi"
+        tools:layout="@layout/fragment_defi" />
 </navigation>
