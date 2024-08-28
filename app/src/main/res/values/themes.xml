@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="Theme.MAptos" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#000000</item>
-        <item name="colorPrimaryVariant">#D1D1D1</item>
-        <item name="colorOnPrimary">#A6A6A6</item>
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryVariant">#FFFFFF</item>
+        <item name="colorOnPrimary">#757575</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">#797777</item>
-        <item name="colorSecondaryVariant">#757575</item>
-        <item name="colorOnSecondary">#BDBDBD</item>
+        <item name="colorSecondary">#9E9E9E</item>
+        <item name="colorSecondaryVariant">#060000</item>
+        <item name="colorOnSecondary">#212121</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">#FFFFFF</item>
         <!-- Customize your theme here. -->
