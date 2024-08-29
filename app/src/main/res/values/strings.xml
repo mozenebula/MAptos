@@ -4,4 +4,10 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_DeFi">DeFi</string>
+    <string name="title_login">Aptos Explorer</string>
+    <string name="subtitle_login">Unlocking the Future of Decentralized Finance and Innovation</string>
+    <string name="i_don_t_have_a_wallet">I don\'t have a wallet</string>
+    <string name="create_a_new_wallet">Create a new wallet</string>
+    <string name="i_have_a_wallet">I have a wallet</string>
+    <string name="import_wallet">Import Wallet</string>
 </resources>
