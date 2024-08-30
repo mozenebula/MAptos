@@ -12,5 +12,19 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">#0C0B0B</item>
         <!-- Customize your theme here. -->
+        <item name="colorAccent">#1a1a1a</item>
+    </style>
+
+    <style name="Theme.MAptos.mobile">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryVariant">#FFFFFF</item>
+        <item name="colorOnPrimary">#757575</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#9E9E9E</item>
+        <item name="colorSecondaryVariant">#060000</item>
+        <item name="colorOnSecondary">#212121</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">#0C0B0B</item>
     </style>
 </resources>

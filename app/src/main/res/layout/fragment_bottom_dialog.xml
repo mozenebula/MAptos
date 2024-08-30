@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/colorOnSecondary"
+    tools:context=".ui.login.BottomDialogFragment">
+
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:background="@color/bottom_dialog_background"
+        android:orientation="vertical"
+        android:layout_height="360dp">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="2dp"
+            android:layout_width="40dp"
+            android:background="?attr/colorOnPrimary"
+            android:layout_height="2dp">
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/login_card"
+            android:layout_height="120dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/mnemonics"
+                    android:layout_marginStart="20dp"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="20sp"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/title1"
+                    android:layout_width="300dp"
+                    android:text="@string/please_copy_or_back_up_the_mnemonic_phrase"
+                    android:layout_marginStart="20dp"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_login_mnemonic"
+                    android:layout_height="60dp">
+
+                </ImageView>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="match_parent"
+            app:cardCornerRadius="16dp"
+            android:backgroundTint="@color/login_card"
+            android:layout_height="120dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/private_key"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="20sp"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/title"
+                    android:layout_width="300dp"
+                    android:text="@string/import_private_key"
+                    android:layout_marginStart="20dp"
+                    android:textColor="?attr/colorOnPrimary"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_login_private_key"
+                    android:layout_height="60dp">
+
+                </ImageView>
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </LinearLayout>
+</FrameLayout>

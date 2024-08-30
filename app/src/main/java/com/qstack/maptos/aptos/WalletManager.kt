@@ -1,8 +1,16 @@
 package com.qstack.maptos.aptos
 
+import android.content.Context
+import androidx.lifecycle.lifecycleScope
 import cash.z.ecc.android.bip39.Mnemonics.MnemonicCode
 import cash.z.ecc.android.bip39.Mnemonics.WordCount
 import cash.z.ecc.android.bip39.toSeed
+import com.qstack.maptos.aptos.room.Wallet
+import com.qstack.maptos.aptos.room.WalletRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import xyz.mcxross.kaptos.Aptos
 import xyz.mcxross.kaptos.account.Account
 import xyz.mcxross.kaptos.core.crypto.KeyPair
@@ -18,8 +26,11 @@ import xyz.mcxross.kaptos.model.HexInput
 
 object WalletManager {
 
-    fun generateAccount(): KeyPair {
-        val account = Account.fromPrivateKey(generatePrivateKey(" "))
+    fun generateAccount(wallet: Wallet): KeyPair {
+
+        val mnemonic = WalletManager.generateMnemonic()
+        val privateKey = WalletManager.generatePrivateKey(mnemonic)
+        val account = Account.generate()
         return generateKeypair(SigningSchemeInput.Ed25519)
     }
 

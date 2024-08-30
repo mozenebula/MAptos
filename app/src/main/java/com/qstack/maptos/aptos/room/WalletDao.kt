@@ -1,5 +1,6 @@
 package com.qstack.maptos.aptos.room
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -18,4 +19,7 @@ interface WalletDao {
 
     @Query("DELETE FROM wallets WHERE id = :id")
     fun deleteById(id: Long)
+
+    @Query("SELECT COUNT(*) FROM wallets")
+    fun getWalletCount(): Int
 }

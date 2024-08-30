@@ -10,4 +10,8 @@
     <string name="create_a_new_wallet">Create a new wallet</string>
     <string name="i_have_a_wallet">I have a wallet</string>
     <string name="import_wallet">Import Wallet</string>
+    <string name="mnemonics">Mnemonics</string>
+    <string name="please_copy_or_back_up_the_mnemonic_phrase">Back up the mnemonic phrase</string>
+    <string name="private_key">Private Key</string>
+    <string name="import_private_key">Import private key</string>
 </resources>
