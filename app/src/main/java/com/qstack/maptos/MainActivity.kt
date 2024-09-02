@@ -1,6 +1,8 @@
 package com.qstack.maptos
 
+import android.os.Build
 import android.os.Bundle
+import androidx.annotation.RequiresApi
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -9,7 +11,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationBarView
+import com.qstack.maptos.aptos.data.WalletInfo
 import com.qstack.maptos.databinding.ActivityMainBinding
+import com.qstack.maptos.ui.login.ACCOUNT_INFO
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +27,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.hide()
+
+        val walletInfo = intent.getParcelableExtra<WalletInfo>(ACCOUNT_INFO)
+
 
 
         val navView: BottomNavigationView = binding.navView

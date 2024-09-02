@@ -58,6 +58,8 @@
             android:hint="@string/enter_the_mnemonic_separated_by_spaces" />
 
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/confirm"
+            android:clickable="false"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="40dp"
             android:backgroundTint="@color/import_wallet_button"
@@ -67,6 +69,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp">
             <TextView
+                android:id="@+id/confirm_text"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:text="@string/confirm"

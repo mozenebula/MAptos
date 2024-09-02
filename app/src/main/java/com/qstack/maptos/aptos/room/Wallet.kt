@@ -13,5 +13,4 @@ data class Wallet(
     val mnemonic: String, // 助记词
     val network: String,   // 网络
     val isBackedUp: Boolean,  // 是否备份
-
 )

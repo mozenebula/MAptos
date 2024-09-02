@@ -15,6 +15,8 @@ import com.qstack.maptos.R
 import com.qstack.maptos.databinding.ActivityLoginBinding
 import com.qstack.maptos.databinding.FragmentImportBinding
 
+const val ACCOUNT_INFO = "ACCOUNT_INFO"
+
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding : ActivityLoginBinding
 
