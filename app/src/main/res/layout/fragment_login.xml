@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        android:text="@string/title_login"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary" />
+
+    <TextView
+        android:id="@+id/login_subtitle"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="@string/subtitle_login"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:textColor="?attr/colorPrimary" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/create_wallet"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:backgroundTint="?attr/colorPrimary"
+        app:cardCornerRadius="16dp"
+        android:layout_width="300dp"
+        android:layout_height="80dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textColor="?attr/colorSecondaryVariant"
+                android:text="@string/i_don_t_have_a_wallet">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textColor="?attr/colorOnPrimary"
+                android:text="@string/create_a_new_wallet">
+            </TextView>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/import_wallet"
+        android:layout_marginTop="15dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="?attr/colorPrimary"
+        android:layout_gravity="center"
+        android:backgroundTint="?attr/colorSecondaryVariant"
+        app:cardCornerRadius="16dp"
+        android:layout_width="300dp"
+        android:layout_height="80dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_marginTop="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:textColor="?attr/colorPrimary"
+                android:text="@string/i_have_a_wallet">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:textColor="?attr/colorOnPrimary"
+                android:text="@string/import_wallet">
+            </TextView>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

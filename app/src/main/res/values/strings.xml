@@ -13,5 +13,11 @@
     <string name="mnemonics">Mnemonics</string>
     <string name="please_copy_or_back_up_the_mnemonic_phrase">Back up the mnemonic phrase</string>
     <string name="private_key">Private Key</string>
+    <string name="import_mnemonics">Import Mnemonics</string>
+    <string name="import_private_key_actionbar">Import Private Key</string>
     <string name="import_private_key">Import private key</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm">Confirm</string>
+    <string name="enter_the_mnemonic_separated_by_spaces">Enter the mnemonic, separated by spaces</string>
 </resources>

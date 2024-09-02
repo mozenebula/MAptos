@@ -23,6 +23,7 @@
             android:layout_height="2dp">
         </com.google.android.material.card.MaterialCardView>
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mnemonics"
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="15dp"
             android:layout_width="match_parent"
@@ -33,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/title1"
+                    android:id="@+id/mnemonics_title"
                     android:layout_marginTop="30dp"
                     android:layout_width="wrap_content"
                     android:text="@string/mnemonics"
@@ -44,7 +45,7 @@
                 </TextView>
                 <TextView
                     android:layout_marginTop="10dp"
-                    android:layout_below="@id/title1"
+                    android:layout_below="@id/mnemonics_title"
                     android:layout_width="300dp"
                     android:text="@string/please_copy_or_back_up_the_mnemonic_phrase"
                     android:layout_marginStart="20dp"
@@ -64,6 +65,7 @@
             </RelativeLayout>
         </com.google.android.material.card.MaterialCardView>
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/private_key"
             android:layout_marginTop="30dp"
             android:layout_marginHorizontal="15dp"
             android:layout_width="match_parent"
@@ -74,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:id="@+id/title"
+                    android:id="@+id/private_key_title"
                     android:layout_marginTop="30dp"
                     android:layout_width="wrap_content"
                     android:text="@string/private_key"
@@ -86,7 +88,7 @@
                 <TextView
                     android:id="@+id/subtitle"
                     android:layout_marginTop="10dp"
-                    android:layout_below="@id/title"
+                    android:layout_below="@id/private_key_title"
                     android:layout_width="300dp"
                     android:text="@string/import_private_key"
                     android:layout_marginStart="20dp"
