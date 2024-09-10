@@ -78,11 +78,13 @@ class ImportFragment : Fragment() {
 
         viewModel.wallet.observe(viewLifecycleOwner, Observer { wallet ->
             val intent = Intent(requireContext(), MainActivity::class.java)
-            intent.putExtra(
-                ACCOUNT_INFO, WalletInfo(walletName = wallet.walletName,
-                accountName = wallet.accountName,
-                address = wallet.address,
-                isBackedUp = wallet.isBackedUp))
+            if(wallet != null) {
+                intent.putExtra(
+                    ACCOUNT_INFO, WalletInfo(walletName = wallet.walletName,
+                        accountName = wallet.accountName,
+                        address = wallet.address,
+                        isBackedUp = wallet.isBackedUp))
+            }
             startActivity(intent)
         })
 

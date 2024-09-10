@@ -23,9 +23,24 @@ class LoginViewModel : ViewModel() {
 
     val checkImport : LiveData<Boolean> get() = _checkImport
 
-    private var _wallet = MutableLiveData<Wallet>()
+    private var _wallet = MutableLiveData<Wallet?>()
 
-    val wallet : LiveData<Wallet> get() = _wallet
+    val wallet : LiveData<Wallet?> get() = _wallet
+
+
+    fun checkWallet(context: Context) {
+        val walletRepository = WalletRepository(context)
+        viewModelScope.launch {
+            val count = walletRepository.getWalletCount()
+            if(count > 0) {
+                val wallet = walletRepository.getFirstWallet()
+                if(wallet != null) {
+                    _wallet?.postValue(wallet)
+                }
+            }
+        }
+
+    }
 
 
     fun createAccount(context : Context, phrase: String?=null) {

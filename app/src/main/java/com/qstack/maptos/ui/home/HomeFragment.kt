@@ -1,20 +1,22 @@
 package com.qstack.maptos.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 import com.qstack.maptos.databinding.FragmentHomeBinding
-import com.qstack.maptos.aptos.KeystoreHelper
-import com.qstack.maptos.aptos.WalletManager
-import com.qstack.maptos.aptos.room.Wallet
-import com.qstack.maptos.aptos.room.WalletRepository
-import kotlinx.coroutines.launch
+import com.qstack.maptos.ui.home.tabs.HomeNFTFragment
+import com.qstack.maptos.ui.home.tabs.HomeTokenFragment
+import android.content.Context
+import android.util.AttributeSet
+import androidx.coordinatorlayout.widget.CoordinatorLayout
+import com.google.android.material.appbar.AppBarLayout
+import com.qstack.maptos.R
+import kotlin.math.abs
 
 class HomeFragment : Fragment() {
 
@@ -35,33 +37,18 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-//        val textView: TextView = binding.buttonHome
-//        homeViewModel.text.observe(viewLifecycleOwner) {
-//            textView.text = it
-//        }
-        binding.buttonHome.setOnClickListener{
-            val walletRepository = WalletRepository(binding.root.context)
-            val mnemonic = WalletManager.generateMnemonic()
-            val privateKey = WalletManager.generatePrivateKey(mnemonic)
-            // 创建一个 Wallet 对象
-            val wallet = Wallet(
-                walletName = "钱包A",
-                accountName = "Account 1",
-                address = WalletManager.getAddress(privateKey),
-                privateKey = KeystoreHelper.encryptPrivateKey(privateKey.toString()),
-                isBackedUp = false,
-                mnemonic = KeystoreHelper.encryptPrivateKey(mnemonic),
-                network = "Aptos"
-            )
+        val pageAdapter = MyPagerAdapter(this)
+        binding.viewpager.adapter = pageAdapter
 
-            // 插入钱包到数据库
-            lifecycleScope.launch {
-                walletRepository.insertWallet(wallet)
+        TabLayoutMediator(binding.tabs, binding.viewpager) {
+                tab, position ->
+            tab.text = when(position) {
+                0 -> "Token"
+                else -> "NFT"
             }
+        }.attach()
 
 
-            Log.e("TEST","插入数据：" + wallet)
-        }
         return root
     }
 
@@ -69,4 +56,20 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    class MyPagerAdapter(fragmentActivity: HomeFragment) : FragmentStateAdapter(fragmentActivity) {
+        override fun getItemCount(): Int {
+            return 2// 页数
+        }
+
+        override fun createFragment(position: Int): Fragment {
+            return when (position) {
+                0 -> HomeTokenFragment()
+                1 -> HomeNFTFragment()
+                else -> throw IllegalStateException("Unexpected position $position")
+            }
+        }
+    }
+
+
 }

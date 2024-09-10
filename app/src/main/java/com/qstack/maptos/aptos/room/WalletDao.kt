@@ -9,7 +9,7 @@ import androidx.room.Update
 @Dao
 interface WalletDao {
     @Insert
-    fun insert(wallet: Wallet)
+    fun insert(wallet: Wallet): Long
 
     @Update
     fun update(wallet: Wallet)
@@ -22,4 +22,7 @@ interface WalletDao {
 
     @Query("SELECT COUNT(*) FROM wallets")
     fun getWalletCount(): Int
+
+    @Query("SELECT * FROM wallets LIMIT 1")
+    fun getFirstWallet(): Wallet?
 }

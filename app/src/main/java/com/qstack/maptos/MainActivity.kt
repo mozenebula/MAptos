@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.hide()
 
+
         val walletInfo = intent.getParcelableExtra<WalletInfo>(ACCOUNT_INFO)
 
 

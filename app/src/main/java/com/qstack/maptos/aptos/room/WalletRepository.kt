@@ -40,9 +40,15 @@ class WalletRepository(context: Context) {
     }
 
     //查询钱包总数
-    suspend fun getWalletCount() {
-        withContext(Dispatchers.IO) {
+    suspend fun getWalletCount(): Int {
+        return withContext(Dispatchers.IO) {
             walletDao.getWalletCount()
+        }
+    }
+
+    suspend fun getFirstWallet(): Wallet? {
+        return withContext(Dispatchers.IO) {
+            walletDao.getFirstWallet()
         }
     }
 }
