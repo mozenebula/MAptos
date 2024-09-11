@@ -22,16 +22,246 @@
                 app:layout_collapseMode="parallax"
                 android:layout_height="wrap_content">
                 <LinearLayout
+                    android:orientation="vertical"
                     android:background="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="250dp">
+                    <RelativeLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:text="Maptos"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp">
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/avatar_container"
+                            android:layout_marginStart="10dp"
+                            app:cardCornerRadius="24dp"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp">
+                            <ImageView
+                                android:src="@drawable/ic_launcher_background"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            </ImageView>
+                        </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:id="@+id/account_name"
+                            android:textSize="14sp"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/white"
+                            android:layout_toEndOf="@+id/avatar_container"
+                            android:text="Wallet A - Account 01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                        <TextView
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/balance"
+                            android:textSize="30sp"
+                            android:layout_below="@+id/account_name"
+                            android:layout_marginStart="10dp"
+                            android:textColor="@color/white"
+                            android:layout_toEndOf="@+id/avatar_container"
+                            android:text="$13.67"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp">
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                android:layout_gravity="center"
+                                android:layout_width="46dp"
+                                app:cardCornerRadius="23dp"
+                                android:layout_height="46dp">
+                                <ImageView
+                                    android:src="@drawable/ic_login_private_key"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </ImageView>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="Transfer"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+                            
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                android:layout_gravity="center"
+                                android:layout_width="46dp"
+                                app:cardCornerRadius="23dp"
+                                android:layout_height="46dp">
+                                <ImageView
+                                    android:src="@drawable/ic_login_private_key"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </ImageView>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="Transfer"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                android:layout_gravity="center"
+                                android:layout_width="46dp"
+                                app:cardCornerRadius="23dp"
+                                android:layout_height="46dp">
+                                <ImageView
+                                    android:src="@drawable/ic_login_private_key"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </ImageView>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="Transfer"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <androidx.cardview.widget.CardView
+                                android:layout_gravity="center"
+                                android:layout_width="46dp"
+                                app:cardCornerRadius="23dp"
+                                android:layout_height="46dp">
+                                <ImageView
+                                    android:src="@drawable/ic_login_private_key"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                </ImageView>
+                            </androidx.cardview.widget.CardView>
+                            <TextView
+                                android:textAlignment="center"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:text="Transfer"
+                                android:textSize="12sp"
+                                android:textColor="@color/white"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            </TextView>
+
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
                 <LinearLayout
+                    android:orientation="vertical"
                     android:layout_marginTop="0.1dp"
                     android:layout_marginBottom="0.1dp"
                     android:background="@color/black"
                     android:layout_width="match_parent"
                     android:layout_height="149dp">
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:text="Aptos Defi"
+                        android:textSize="12sp"
+                        android:textColor="@color/gray_400"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+                        <TextView
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:text="OminiBets: The New Era of Sports Betting with Blockchain"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4">
+                        </TextView>
+                        <ImageView
+                            android:src="@drawable/ic_login_mnemonic"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1">
+
+                        </ImageView>
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:text="Join Now"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginStart="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </TextView>
                 </LinearLayout>
             </LinearLayout>
             <View

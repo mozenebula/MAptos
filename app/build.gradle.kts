@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.kaptos.android)
     implementation(libs.kotlin.bip39)
+    implementation("io.github.youth5201314:banner:2.2.3")
     implementation(libs.bcprov.jdk15on)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.core.splashscreen)
