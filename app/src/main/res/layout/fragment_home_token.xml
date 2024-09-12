@@ -1,20 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:layout_height="60dp">
+    <androidx.cardview.widget.CardView
+        android:layout_centerVertical="true"
+        android:id="@+id/icon_container"
+        android:layout_width="40dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_height="40dp">
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/icon"
+        android:layout_width="40dp"
+        android:src="@drawable/ic_login_mnemonic"
+        android:layout_height="40dp">
+    </ImageView>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tokenName"
+        android:text="Aptos"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        android:layout_toEndOf="@+id/icon_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:text="$6.1"
+        android:textSize="12sp"
+        android:layout_below="@+id/tokenName"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/import_wallet_button_text"
+        android:layout_toEndOf="@+id/icon_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/item_number"
+        android:layout_marginTop="10dp"
+        android:id="@+id/amount"
+        android:text="0.004974"
+        android:layout_alignParentRight="true"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginEnd="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:layout_height="wrap_content"/>
 
     <TextView
-        android:id="@+id/content"
+        android:text="$11.64"
+        android:textSize="12sp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/amount"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/import_wallet_button_text"
+        android:layout_alignParentEnd="true"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
-</LinearLayout>
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

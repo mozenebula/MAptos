@@ -1,16 +1,12 @@
 package com.qstack.maptos.ui.login
 
 import android.content.Context
-import android.content.Intent
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.qstack.maptos.MainActivity
 import com.qstack.maptos.aptos.KeystoreHelper
 import com.qstack.maptos.aptos.WalletManager
-import com.qstack.maptos.aptos.data.WalletInfo
 import com.qstack.maptos.aptos.room.Wallet
 import com.qstack.maptos.aptos.room.WalletRepository
 import kotlinx.coroutines.launch
