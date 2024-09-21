@@ -47,7 +47,7 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val loginFragmentViewModel = ViewModelProvider(requireActivity())[LoginViewModel::class.java]
         binding.createWallet.setOnClickListener{
-            loginFragmentViewModel.createAccount(binding.root.context)
+            loginFragmentViewModel.createAccount(requireActivity())
             val intent = Intent(requireContext(), MainActivity::class.java)
             startActivity(intent)
         }
